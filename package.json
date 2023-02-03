@@ -4,6 +4,9 @@
   "private": true,
   "description": "maxie_new",
   "author": "Brandon",
+  "engines": {
+    "node": "18.13.0"
+  },
   "keywords": [
     "gatsby"
   ],
