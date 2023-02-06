@@ -3,26 +3,35 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `maxie_new`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Maxie Paper`,
+    description: `Maxie Toilet Paper.`,
+    keywords: ['Toilet Paper'],
+    url: "https://www.maxie.com",
+    ogImage: 'src/images/basic_logo.png',
+    lang: `en`
   },
   plugins: [
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+         name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/maxie_logo.png`, // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images`,
       },
       __key: "images",
     },
